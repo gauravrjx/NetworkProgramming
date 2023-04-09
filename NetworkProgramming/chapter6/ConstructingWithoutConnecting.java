@@ -7,13 +7,16 @@ public class ConstructingWithoutConnecting {
     public static void main(String [] args) {
         try {
             Socket socket = new Socket();
-            // fill in socket options
-            SocketAddress address = new InetSocketAddress("example.com", 80);
+            SocketAddress address = new InetSocketAddress("time.nist.gov", 13);
             socket.connect(address);
             InputStream in = socket.getInputStream();
             InputStreamReader inr = new InputStreamReader(in);
             BufferedReader br = new BufferedReader(inr);
-            System.out.println(br.readLine());
+            String line;
+            while((line = br.readLine()) != null){
+
+                System.out.println(line);
+            }
             socket.close();
            } catch (IOException ex) {
             System.err.println(ex);
