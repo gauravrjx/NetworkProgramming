@@ -6,7 +6,8 @@ import java.net.*;
 
 public class ReadFromServer {
     public static void main(String[] args) {
-        try (Socket socket = new Socket("time.nist.gov", 13)) {
+        try {
+            Socket socket = new Socket("time.nist.gov", 13);
             socket.setSoTimeout(15000);
             InputStream in = socket.getInputStream();
 
