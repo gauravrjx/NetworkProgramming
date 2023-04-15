@@ -1,6 +1,6 @@
 package BasicMultithreading;
 
-public class Main {
+public class ThreadingMain {
     public static void main(String[] args) {
 
         BasicThread t1 = new BasicThread("FIRST");
