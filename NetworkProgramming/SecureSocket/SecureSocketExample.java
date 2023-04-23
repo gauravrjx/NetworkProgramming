@@ -11,8 +11,8 @@ import java.security.SecureRandom;
 public class SecureSocketExample {
 
     public static void main(String[] args) {
-        String hostname = "www.example.com";
-        int port = 443;
+        String hostname = "localhost";
+        int port = 8888;
 
         try {
             // Create an SSL context with the TLS protocol

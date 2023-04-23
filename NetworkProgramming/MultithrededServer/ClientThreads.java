@@ -15,7 +15,7 @@ public class ClientThreads extends Thread {
 
         Socket server;
         try {
-            server = new Socket("localhost", 13001);
+            server = new Socket("localhost", 8000);
             System.out.println("connection started from port: " + server.getLocalPort());
 
             InputStreamReader in = new InputStreamReader(server.getInputStream());

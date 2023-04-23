@@ -12,7 +12,7 @@ public class Client {
         // send message to server
         PrintWriter out = new PrintWriter(ss.getOutputStream(), true);
         
-        out.println("GET / HTTP/1.1");
+        out.println("GET /old-location HTTP/1.1");
         out.println("Host: example.com");
         out.println();
 

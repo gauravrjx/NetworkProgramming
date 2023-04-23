@@ -7,13 +7,9 @@ import java.util.logging.*;;
 
 public class RedirectorServer {
     private final static int port = 8000;
-    private final static String newSite = "new-page";
+    private final static String newSite = "new-resource-path";
     private static final Logger logger = Logger.getLogger("Redirector");
 
-    // public Redirector(String newSite, int port) {
-    // this.port = port;
-    // this.newSite = newSite;
-    // }
     public static void main(String[] args) {
         // Redirector redirector = new Redirector(, 8000);
         try {
@@ -28,7 +24,6 @@ public class RedirectorServer {
                         new InputStreamReader(cs.getInputStream())).readLine();
 
                 String[] pieces = input.split("\\w*");
-                System.out.println(pieces);
                 String theFile = pieces[1];
 
                 if (input.indexOf("HTTP") != -1) {
