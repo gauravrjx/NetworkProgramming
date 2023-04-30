@@ -6,7 +6,7 @@ import javax.net.ssl.*;
 
 public class SecureServer {
     public static void main(String[] args) {
-        int port = 8888;
+        int port = 6666;
         try {
             SSLServerSocketFactory sslServerSocketFactory = (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
             SSLServerSocket sslServerSocket = (SSLServerSocket) sslServerSocketFactory.createServerSocket(port);
