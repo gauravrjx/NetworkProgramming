@@ -22,9 +22,13 @@ public class RedirectorServer {
                 PrintWriter out = new PrintWriter(cs.getOutputStream(), true);
                 String input = new BufferedReader(
                         new InputStreamReader(cs.getInputStream())).readLine();
-
+                System.out.println(input);
+                System.out.println("__________________________");
                 String[] pieces = input.split("\\w*");
                 String theFile = pieces[1];
+                System.out.println(pieces);
+
+                System.out.println("__________________________");
 
                 if (input.indexOf("HTTP") != -1) {
                     out.write("HTTP/1.0 302 FOUND\r\n");

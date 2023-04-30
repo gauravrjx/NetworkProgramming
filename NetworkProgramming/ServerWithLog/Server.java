@@ -11,7 +11,7 @@ public class Server {
     public static void main(String[] args) {
         ServerSocket ss=null;
         try {
-            ss = new ServerSocket(9000);
+            ss = new ServerSocket(20000);
         }catch(IOException e){
             errorLog.log(Level.SEVERE, "could not start the server");
         }
