@@ -10,7 +10,7 @@ public class ChargenClient {
     public static void main(String[] args) throws IOException {
         // Connect to the server
         SocketChannel socket = SocketChannel.open();
-        socket.connect(new InetSocketAddress("localhost", 8080));
+        socket.connect(new InetSocketAddress("localhost", 8888));
 
         // Read data from the server
         ByteBuffer buffer = ByteBuffer.allocate(74);
@@ -22,7 +22,7 @@ public class ChargenClient {
         }
 
         // Close the connection
-        socket.close();
+        // socket.close();
     }
 }
 
