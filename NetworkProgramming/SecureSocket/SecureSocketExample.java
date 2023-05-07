@@ -11,7 +11,7 @@ import java.security.SecureRandom;
 public class SecureSocketExample {
 
     public static void main(String[] args) {
-        String hostname = "localhost";
+        String hostname = "merojob.com";
         int port = 8888;
 
         try {
