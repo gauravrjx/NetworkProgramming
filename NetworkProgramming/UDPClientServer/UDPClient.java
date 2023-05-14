@@ -13,8 +13,10 @@ public class UDPClient {
       Scanner sc = new Scanner(System.in);
       String inFromUser = sc.nextLine();
 
-      // start client socket
-      DatagramSocket clientSocket = new DatagramSocket();
+      // start client socket at any random port
+      DatagramSocket clientSocket = new DatagramSocket(0);
+
+      // remote address
       InetAddress IPAddress = InetAddress.getByName("localhost");
 
       // send read messge to server
