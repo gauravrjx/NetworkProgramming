@@ -8,7 +8,7 @@ import java.util.*;
 
 public class DatagramChannelClient {
     public final static int PORT = 7000;
-    private final static int LIMIT = 9999;
+    private final static int LIMIT = 900;
 
     public static void main(String[] args) {
         SocketAddress remote;
@@ -23,6 +23,8 @@ public class DatagramChannelClient {
             channel.configureBlocking(false);
             channel.connect(remote);
 
+            // register the channel with selector for read or write operation
+            // because we are interested in read and write only
             Selector selector = Selector.open();
             channel.register(selector, SelectionKey.OP_READ | SelectionKey.OP_WRITE);
 
@@ -37,6 +39,7 @@ public class DatagramChannelClient {
                     
                 // wait one minute for a connection
                 selector.select(60000);
+                // ask selector to return all the 
                 Set<SelectionKey> readyKeys = selector.selectedKeys();
                 if (readyKeys.isEmpty() && n == LIMIT) {
                     // All packets have been written and it doesn't look like any
