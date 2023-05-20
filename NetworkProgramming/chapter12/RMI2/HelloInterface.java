@@ -1,4 +1,4 @@
-package chapter12.upperlower.RMI2;
+// package chapter12.RMI2;
 
 import java.rmi.*;
 
