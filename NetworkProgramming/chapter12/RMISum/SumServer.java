@@ -3,15 +3,16 @@
 import java.io.*;
 import java.rmi.*;
 
-public class HelloServer
+public class SumServer
 {
   public static void main (String[] argv) 
   {
     try 
     {
-      Hello robj = new Hello ("Hello, world!");
-      Naming.rebind ("Hello", robj);
-      System.out.println ("Hello Server is ready.");
+      
+      Sum robj = new Sum();
+      Naming.rebind ("Sum", robj);
+      System.out.println ("Hello, Server is ready.");
     } 
     catch (Exception e) 
     {

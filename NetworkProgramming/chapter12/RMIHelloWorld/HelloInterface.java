@@ -1,5 +1,4 @@
-// package chapter12.RMI2;
-
+// STEP #1: Define Interface
 import java.rmi.*;
 
 public interface HelloInterface extends Remote 

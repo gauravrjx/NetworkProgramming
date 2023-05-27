@@ -1,6 +1,5 @@
-// This is IMPLEMENTER class
+// STEP#2: Defining the IMPLEMENTER class
 
-// package chapter12.RMI2;
 
 import java.rmi.*;
 import java.rmi.server.*;

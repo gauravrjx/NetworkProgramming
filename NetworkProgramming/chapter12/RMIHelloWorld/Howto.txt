@@ -1,0 +1,35 @@
+===============================================================
+Steps to run the RMI program:
+===============================================================
+1. compile all the java files
+    $ javac *.java
+2. run rmiregistry as below
+    (on linux) $ rmiregistry
+    (on windows) $ start rmiregistry
+3. run the server program
+    $ java SumServer
+4. run the client program
+    $ java SumClient
+
+Note: 
+1. ignore $ symbol and replace SumServer, SumClient with your 
+own file names.
+2. The files are not run as a package and no need to include
+the package names.
+3. When executing above commands in terminal in windows,
+use gitbash terminal, or powershell, or any terminal that
+supports linux environment.
+================================================================
+If you get error like address already in use due to default port
+(1099) then try killing the process like this
+
+A. for Windows:
+    $ netstat -ano | findstr :1099
+    $ taskkill /pid "EnterProcessIdHere" /F
+
+B. Linux/Mac:
+    $ lsof -i :1099
+    $ kill EnterProcessIdHere
+
+Or, restart the PC instead.
+=================================================================

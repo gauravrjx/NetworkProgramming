@@ -1,4 +1,4 @@
-// package chapter12.RMI2;
+// STEP #4: Creating client program
 
 import java.rmi.*;
 import java.io.*;
