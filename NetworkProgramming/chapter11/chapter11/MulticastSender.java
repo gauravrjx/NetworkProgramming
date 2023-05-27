@@ -1,4 +1,7 @@
+// STEP #2: Program to multicast a message to a Multicast group
+
 package chapter11;
+
 import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
