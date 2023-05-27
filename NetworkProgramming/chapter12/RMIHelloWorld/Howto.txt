@@ -4,8 +4,8 @@ Steps to run the RMI program:
 1. compile all the java files
     $ javac *.java
 2. run rmiregistry as below
-    (on linux) $ rmiregistry
-    (on windows) $ start rmiregistry
+    $ rmiregistry
+    (or) $ start rmiregistry
 3. run the server program
     $ java SumServer
 4. run the client program
@@ -18,7 +18,7 @@ own file names.
 the package names.
 3. When executing above commands in terminal in windows,
 use gitbash terminal, or powershell, or any terminal that
-supports linux environment.
+supports unix environment.
 ================================================================
 If you get error like address already in use due to default port
 (1099) then try killing the process like this
