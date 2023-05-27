@@ -1,4 +1,7 @@
+// STEP #1: Program to join/leave a Multicast group 
+
 package chapter11;
+
 import java.net.DatagramPacket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
