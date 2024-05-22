@@ -9,7 +9,7 @@ public class ObjectMethod {
 			InetAddress addr1 = InetAddress.getByName("rojgari.com");
 			InetAddress addr2 = InetAddress.getByName("api.rojgari.com");
 
-			// #1. equals() => Check if the two InetAddress objects are equal
+			// #1. equals() => Check if the two InetAddress objects are equal (compares the ip address)
 			if (addr1.equals(addr2)) {
 				System.out.println("both are same");
 			} else {
