@@ -6,37 +6,37 @@ public class SpamFiltering {
 	public static final String blackhole = "sbl.spamhaus.org";
 
 	private static boolean isSpam(String addr) {
+
 		try {
+
 			String query = blackhole;
 			InetAddress ia = InetAddress.getByName(addr);
-			byte[] bytes = ia.getAddress();
 
+			byte[] bytes = ia.getAddress();
 			for (byte b : bytes) {
 				int a = b < 0 ? b + 256 : b;
 				query = a + "." + query;
 				
 			}
 			
-			InetAddress address = InetAddress.getByName(query);
-			String hostAddress = address.getHostAddress();
-			
-            return hostAddress == "127.0.0.2";
-            
+			InetAddress.getByName(query);
+
+			return true;
 		} catch (UnknownHostException e) {
+			// false if not found on spanhaus server
 			return false;
 		}
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String[] arr = { "127.0.0.2", "8.8.8.8", "76.76.21.21" };
+		// spam IP list -> 	https://github.com/stamparm/ipsum	
+		String[] arr = { "92.118.39.120", "167.94.146.53", "127.0.0.1", "8.8.8.8"};
+
 		for (String arg : arr) {
 			if (isSpam(arg)) {
-
 				System.out.println(arg + " is Spammer");
 			} else {
-
-				System.out.println(arg + " is Legit");
+				System.out.println(arg + " seems Legit");
 			}
 		}
 
