@@ -7,9 +7,9 @@ public class ProcessLog {
 
 	public static void main(String[] args) {
 		String file = "logfile.txt";
-		try (FileInputStream fin = new FileInputStream(file);
-				Reader in = new InputStreamReader(fin);
-				BufferedReader bin = new BufferedReader(in);) {
+		try {
+				FileReader fin = new FileReader(file);
+				BufferedReader bin = new BufferedReader(fin);
 
 			for (String entry = bin.readLine(); entry != null; entry = bin.readLine()) {
 				// separate out the IP address
@@ -25,6 +25,7 @@ public class ProcessLog {
 					System.err.println(entry);
 				}
 			}
+			bin.close();
 		} catch (IOException ex) {
 			System.out.println("Exception: " + ex);
 		}
