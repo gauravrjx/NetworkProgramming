@@ -14,6 +14,8 @@ public class SpamFiltering {
 
 			byte[] bytes = ia.getAddress();
 			for (byte b : bytes) {
+				// bytes are 8-bit signed numbers, so add 256 in case of -ve value
+				// 256 - 8-bit max value
 				int a = b < 0 ? b + 256 : b;
 				query = a + "." + query;
 				
