@@ -6,7 +6,7 @@ public class TestProtocol {
         testProtocol("ftp://192.168.99.2");
         testProtocol("mailto:jr.gaurav2015@gmail.com");
         testProtocol("http://google.com");
-        testProtocol("abcd://google.com");
+        testProtocol("jdbc:mysql://luna.metalab.unc.edu:3306/NEWS");  // not supported by URL constructor
     }
 
 
