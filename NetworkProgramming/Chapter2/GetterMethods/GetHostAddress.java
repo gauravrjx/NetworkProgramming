@@ -8,7 +8,7 @@ public class GetHostAddress {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try {
-			InetAddress address =  InetAddress.getByName("google.com");
+			InetAddress address =  InetAddress.getByName("api.rojgari.com");
 			String ip_address = address.getHostAddress();// returns String
 			System.out.println(ip_address);
 		} catch(Exception e) {
