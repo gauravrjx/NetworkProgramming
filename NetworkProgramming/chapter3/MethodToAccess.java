@@ -5,7 +5,7 @@ import java.net.*;
 public class MethodToAccess {
 	public static void main(String[] args) {
 		try {
-			URL url = new URL("https://www.youtube.com:7000/results?search_query=abc");
+			URL url = new URL("http://www.youtube.com/results?search_query=abc");
 
 			System.out.println("Protocol: " + url.getProtocol());
 			System.out.println("Host Name: " + url.getHost());
