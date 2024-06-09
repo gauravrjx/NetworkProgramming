@@ -1,13 +1,13 @@
 package chapter3;
 
 import java.net.Authenticator;
-import java.net.InetAddress;
 import java.net.PasswordAuthentication;
 import java.net.URL;
 import java.net.URLConnection;
 import java.io.*;
 
 public class AuthnticatorClass extends Authenticator {
+    @Override
     protected PasswordAuthentication getPasswordAuthentication() {
         // Prompt the user for a username and password
         String username = "03268048";
@@ -22,7 +22,7 @@ public class AuthnticatorClass extends Authenticator {
 
         try {
             // Create a URL object
-            URL url = new URL("https://meroshare.cdsc.com.np/#/login");
+            URL url = new URL("https://web.khalti.com/#/login");
 
             // Open a connection to the URL
             URLConnection connection = url.openConnection();
