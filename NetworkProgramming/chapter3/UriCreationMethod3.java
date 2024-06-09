@@ -7,7 +7,7 @@ public class UriCreationMethod3 {
     public static void main(String[] args) {
         try {
             // create a URI object with all components
-            URI uri = new URI("https", "user:password", "example.com", 8080, "/path", "query=value", "fragment");
+            URI uri = new URI("https", "user:password", "example.com", 8080, "/path", "query=value", "about-us");
 
             // print out the URI components
             System.out.println("Scheme: " + uri.getScheme());
