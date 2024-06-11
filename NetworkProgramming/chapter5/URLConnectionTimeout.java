@@ -4,12 +4,14 @@ package chapter5;
 import java.io.*;
 import java.net.*;
 
-public class URLConnectionExample {
+public class URLConnectionTimeout {
 	public static void main(String[] args) {
 		try {
-			URL u = new URL("http://www.oreilly.com/");
+			URL u = new URL("http://www.oreilly.com/jkjh");
 			URLConnection uc = u.openConnection();
-			System.out.println(uc.getURL());
+			uc.setConnectTimeout(0);
+			uc.connect();
+			System.out.println("connected");
 		} catch (IOException ex) {
 			System.err.println(ex);
 		}
