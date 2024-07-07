@@ -25,7 +25,7 @@ public class Server {
             try{
             Socket cs;
             cs = ss.accept();
-            infoLog.info("CONNECTED");
+            infoLog.info("CONNECTED TO" + " " + cs.getRemoteSocketAddress());
 
             // read the message
             InputStreamReader in = new InputStreamReader(cs.getInputStream());
