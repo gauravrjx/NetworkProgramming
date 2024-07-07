@@ -8,6 +8,7 @@ public class PrintAllPorts {
         for (int i =1000; i<=2000; i++){
             try {
                 ServerSocket s = new ServerSocket(i);
+                s.close();
             } catch (IOException e) {
                 // TODO: handle exception
                 System.out.println("port "+i+ " is already in use");
