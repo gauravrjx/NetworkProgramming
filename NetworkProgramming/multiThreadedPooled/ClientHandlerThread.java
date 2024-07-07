@@ -11,7 +11,9 @@ public class ClientHandlerThread extends Thread{
 
     @Override
     public void run() {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+        try (BufferedReader reader = new BufferedReader(
+            new InputStreamReader(connection.getInputStream())
+            );
              PrintWriter writer = new PrintWriter(connection.getOutputStream(), true)) {
 
             String message;
