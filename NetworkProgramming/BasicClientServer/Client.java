@@ -30,5 +30,6 @@ public class Client {
         System.out.println("server: " + response);
 
         ss.close();
+        scanner.close();
     }
 }
