@@ -25,6 +25,7 @@ public class ConnectFromLocalInterface {
             while((line=br.readLine()) != null){
                 System.out.println(line);
             }
+            socket.close();
         } catch (IOException e) {
             System.out.println("something went wrong");
         }
