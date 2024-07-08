@@ -49,6 +49,8 @@ public class SingleFileHTTPServer {
         try {
             Path path = Paths.get(file);
             byte[] data = Files.readAllBytes(path);
+            
+            // get content type of response (file)
             String contentType = URLConnection.getFileNameMap().getContentTypeFor(path.toString());
             
             new SingleFileHTTPServer(data, encoding, contentType, port);
