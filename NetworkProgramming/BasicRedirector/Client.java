@@ -6,7 +6,7 @@ import java.util.*;
 public class Client {
     public static void main(String[] args) throws IOException {
 
-        Socket ss = new Socket("localhost", 8000);
+        Socket ss = new Socket("localhost", 8009);
         System.out.println("connected...");
 
         // send message to server
@@ -20,7 +20,7 @@ public class Client {
         InputStream in = ss.getInputStream();
         BufferedReader input = new BufferedReader(new InputStreamReader(in));
         String response;
-        System.out.println("server: ");
+        System.out.println("server response: ");
         while((response = input.readLine()) != null){
             System.out.println(response);
         }
