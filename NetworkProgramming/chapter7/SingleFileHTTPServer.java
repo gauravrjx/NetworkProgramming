@@ -84,7 +84,7 @@ public class SingleFileHTTPServer {
                         // Prepare RESPONSE
                         // step 1: prepare header
                         // If this is HTTP/1.0 or later send a MIME header
-                        if (request.toString().indexOf("HTTP/") != -1) {
+                        if (request.toString().indexOf("HTTP/1.0") != -1) {
                             out.write(header);
                         }
                         // step 2: prepare body
